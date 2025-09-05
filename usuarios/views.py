@@ -14,7 +14,7 @@ def registro(request):
             return redirect('home')
     else:
         form = UserCreationForm()
-    return render(request, 'usuarios/registro.html', {'form': form})
+    return render(request, 'registro/registro.html', {'form': form})
 
 # Login
 def login_usuario(request):
@@ -29,7 +29,7 @@ def login_usuario(request):
             messages.error(request, "Usuario o contraseña incorrectos")
     else:
         form = AuthenticationForm()
-    return render(request, 'usuarios/login.html', {'form': form})
+    return render(request, 'registro/login.html', {'form': form})
 
 # Logout
 def logout_usuario(request):
