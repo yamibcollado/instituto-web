@@ -1,6 +1,8 @@
 from django.contrib import admin
-from .models import Alumno, Profesor, Administrador
+from .models import  PerfilAdministrador, PerfilAlumno, PerfilProfesor, Usuario
 
-admin.site.register(Alumno)
-admin.site.register(Profesor)
-admin.site.register(Administrador)
+admin.site.register(PerfilAlumno)
+admin.site.register(PerfilProfesor)
+admin.site.register(PerfilAdministrador)
+admin.site.register(Usuario)
+
