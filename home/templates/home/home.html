@@ -3,5 +3,88 @@
 
 
 {% block content %}
-<h1>hola papi soy la home</h1>
+
+    <!-- CARRUSEL DE IMAGENES -->
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'img/estudiante1.jpg' %}" class="d-block w-100" style="height:70vh; object-fit:cover;" alt="estudiante1">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'img/estudiante2.jpg' %}" class="d-block w-100" style="height:70vh; object-fit:cover;" alt="estudiante2">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'img/estudiante3.jpg' %}" class="d-block w-100" style="height:70vh; object-fit:cover;" alt="estudiante3">
+        </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+
+    <!-- Estilos para las imágenes -->
+    <style>
+        .same-size-img {
+            width: 100%;          /* ancho completo de la columna */
+            height: 40vh;         /* altura uniforme */
+            object-fit: cover;    /* mantiene proporción y recorta si es necesario */
+        }
+    </style>
+
+    <div class="container my-5">
+        <div class="row align-items-center">  
+    
+          <!-- Columna izquierda: Imagen -->
+          <div class="col-md-6">
+            <img src="{% static 'img/estudiante1.jpg' %}" class="img-fluid rounded same-size-img" alt="Estudiante">
+          </div>
+    
+          <!-- Columna derecha: Título y texto -->
+          <div class="col-md-6">
+            <h2>Bienvenido a Mi Instituto</h2>
+            <p>
+              Somos una plataforma educativa dedicada a la gestión de cursos, profesores y alumnos. 
+              Aquí podrás acceder a contenido de calidad y mantenerte actualizado en tus estudios.
+            </p>
+          </div>
+    
+        </div>
+    </div>
+    
+    <div class="container my-5">
+        <div class="row align-items-center">  
+    
+          <!-- Columna izquierda: Imagen -->
+          <div class="col-md-6">
+            <img src="{% static 'img/estudiante3.jpg' %}" class="img-fluid rounded same-size-img" alt="Estudiante">
+          </div>
+    
+          <!-- Columna derecha: Título y texto -->
+          <div class="col-md-6">
+            <h2>Bienvenido a Mi Instituto</h2>
+            <p>
+              Somos una plataforma educativa dedicada a la gestión de cursos, profesores y alumnos. 
+              Aquí podrás acceder a contenido de calidad y mantenerte actualizado en tus estudios.
+            </p>
+          </div>
+    
+        </div>
+    </div>
+    
+
+
+  
 {% endblock %}

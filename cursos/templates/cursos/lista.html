@@ -1,10 +1,39 @@
 {% extends 'home/base.html' %}
+{% load static %}
 
 {% block title %}Cursos{% endblock %}
 
 {% block content %}
 <div class="container mt-5">
     <h1 class="text-center">Nuestros Cursos</h1>
-    <p class="text-center">Aquí aparecerá la lista de cursos</p>
+    <p class="text-center">¡Inscribite al curso que mas te guste!</p>
+</div>
+
+<div class="container mt-4"></div>
+    
+<div class="row justify-content-center">
+    {% for curso in cursos %}
+    <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card shadow-sm h-100">
+            <img src="{{ curso.imagen.url }}" 
+                 class="card-img-top img-fluid p-3" 
+                 alt="{{ curso.nombre }}" 
+                 style="max-height:300px; object-fit:cover;">
+            <div class="card-body text-center">
+                <h3>{{ curso.nombre }}</h3>
+                <p> ¡Conviértete en un experto en marketing digital de la mano de profesionales en el área! Este curso está diseñado para que todo lo que aprendas, lo puedas aplicar inmediatamente en tu negocio, organización o idea. </p>
+
+                <h5 class="card-text fw-bold text-green">${{ curso.precio|floatformat:2 }}</h5>
+
+                <!-- Botón de inscripción -->
+                <a href="#" class="btn btn-primary mt-2">
+                    Inscribirse
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 </div>
 {% endblock %}
+

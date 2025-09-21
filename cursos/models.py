@@ -8,6 +8,7 @@ class Curso(models.Model):
     fecha_inicio = models.DateField()
     fecha_fin = models.DateField()
     profesor = models.ForeignKey(Usuario, on_delete=models.SET_NULL, null=True, related_name='cursos_profesor')
+    imagen = models.ImageField(upload_to='cursos/', null=True, blank=True)
 
     def __str__(self):
         return self.nombre
