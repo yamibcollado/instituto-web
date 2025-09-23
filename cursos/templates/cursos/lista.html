@@ -21,7 +21,7 @@
                  style="max-height:300px; object-fit:cover;">
             <div class="card-body text-center">
                 <h3>{{ curso.nombre }}</h3>
-                <p> ¡Conviértete en un experto en marketing digital de la mano de profesionales en el área! Este curso está diseñado para que todo lo que aprendas, lo puedas aplicar inmediatamente en tu negocio, organización o idea. </p>
+                <p> {{ curso.descripcion }} </p>
 
                 <h5 class="card-text fw-bold text-green">${{ curso.precio|floatformat:2 }}</h5>
 
