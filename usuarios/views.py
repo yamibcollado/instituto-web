@@ -5,7 +5,6 @@ from .forms import RegistroForm
 from django.contrib import messages
 
 # Registro
-
 def registro(request):
     if request.method == 'POST':
         form = RegistroForm(request.POST)
